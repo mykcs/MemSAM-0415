@@ -1,7 +1,7 @@
 result/
 result
 
-dataset/
+
 tensorboard/
 __pycache__/
 test_imgs/
@@ -9,4 +9,8 @@ temp_dir
 
 /.idea
 .DS_Store
+
 /checkpoints/sam_vit_b_01ec64.pth
+
+/utils/dataset/CAMUS_public/
+/utils/dataset/EchoNet-Dynamic/
