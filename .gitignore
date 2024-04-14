@@ -1,7 +1,6 @@
 result/
 result
-checkpoints/
-checkpoints
+
 dataset/
 tensorboard/
 __pycache__/
@@ -10,3 +9,4 @@ temp_dir
 
 /.idea
 .DS_Store
+/checkpoints/sam_vit_b_01ec64.pth
