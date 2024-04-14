@@ -1,6 +1,8 @@
 import argparse
 import os
 import json
+from typing import Union
+
 import SimpleITK as sitk
 import cv2
 import numpy as np
@@ -15,14 +17,17 @@ SPLIT_RATIOS = [0.7,0.1,0.2]
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', '--input_dir', type=str, default='/data/dengxiaolong/CAMUS_public/database_nifti')
+
+    # parser.add_argument('-i', '--input_dir', type=str, default='dataset/dengxiaolong/CAMUS_public/database_nifti')
+    parser.add_argument('-i', '--input_dir', type=str, default='dataset/CAMUS_public/database_nifti')
+
     parser.add_argument('-o', '--output_dir', type=str, default='/tmp/CAMUS_public_256')
     parser.add_argument('-f', '--split_file', type=str)
     args = parser.parse_args()
 
     return args
 
-def sitk_load_resize(filepath: str | Path, resize_size) -> Tuple[np.ndarray, Dict[str, Any]]:
+def sitk_load_resize(filepath: Union[str, Path], resize_size) -> Tuple[np.ndarray, Dict[str, Any]]:
     """Loads an image using SimpleITK and returns the image and its metadata.
 
     Args:
