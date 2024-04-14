@@ -9,3 +9,4 @@ test_imgs/
 temp_dir
 
 /.idea
+.DS_Store
