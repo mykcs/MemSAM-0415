@@ -1,4 +1,7 @@
 # MemSAM
+
+0415
+
 **MemSAM: Taming Segment Anything Model for Echocardiography Video Segmentation**, CVPR 2024
 
 <!-- The code will be uploaded later. -->
