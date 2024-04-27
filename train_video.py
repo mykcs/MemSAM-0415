@@ -35,7 +35,7 @@ def main():
     #  ============================================================================= parameters setting ====================================================================================
 
     parser = argparse.ArgumentParser(description='Networks')
-    parser.add_argument('--modelname', default='XMemSAM', type=str, help='type of model, e.g., SAM, SAMFull, MedSAM, MSA, SAMed, SAMUS...')
+    parser.add_argument('--modelname', default='MemSAM', type=str, help='type of model, e.g., SAM, SAMFull, MedSAM, MSA, SAMed, SAMUS...')
     parser.add_argument('--encoder_input_size', type=int, default=256, help='the image size of the encoder input, 1024 in SAM and MSA, 512 in SAMed, 256 in SAMUS')
     parser.add_argument('--low_image_size', type=int, default=256, help='the image embedding size, 256 in SAM and MSA, 128 in SAMed and SAMUS')
     parser.add_argument('--task', default='CAMUS_Video_Full', help='task or dataset name: CAMUS_Video_Full or EchoNet_Video')
