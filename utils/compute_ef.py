@@ -5,7 +5,7 @@
 
 import logging
 from pathlib import Path
-from typing import Any, Dict, Tuple
+from typing import Any, Dict, Tuple, Union
 
 import numpy as np
 import PIL
@@ -15,7 +15,7 @@ from skimage.measure import find_contours
 
 logger = logging.getLogger(__name__)
 
-def sitk_load(filepath: str | Path) -> Tuple[np.ndarray, Dict[str, Any]]:
+def sitk_load(filepath: Union[str, Path]) -> Tuple[np.ndarray, Dict[str, Any]]:
     """Loads an image using SimpleITK and returns the image and its metadata.
 
     Args:
