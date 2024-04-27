@@ -65,3 +65,10 @@ def hausdorff_distance(mask1: Tensor, mask2: Tensor, percentile: int = 95):
     hausdorff_dist = np.percentile(dist, percentile)
 
     return hausdorff_dist
+
+def draw_sem_seg_by_cv2_sum(mask: Tensor, color_map: np.ndarray):
+    '''
+        mask: (h,w)
+        color_map: (n,3)
+        return: (h,w,3)
+    '''
