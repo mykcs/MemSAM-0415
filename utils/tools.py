@@ -124,3 +124,41 @@ def corr(mask1: Tensor, mask2: Tensor) -> float:
 
     return iou_score
 
+import torch
+
+def bias(mask1: Tensor, mask2: Tensor) -> float:
+    """
+    Compute the absolute bias in the number of 'on' pixels between two binary masks.
+
+    Args:
+    - mask1 (Tensor): A binary tensor mask.
+    - mask2 (Tensor): Another binary tensor mask of the same size as mask1.
+
+    Returns:
+    - pixel_bias (float): The absolute difference in the count of 'on' pixels between the two masks.
+    """
+    # Ensure both masks are of the same shape
+    assert mask1.shape == mask2.shape, "Input masks must have the same dimensions."
+    
+    # Count the number of 'on' pixels in each mask
+    on_pixels_mask1 = torch.sum(mask1).item()
+    on_pixels_mask2 = torch.sum(mask2).item()
+    
+    # Compute the absolute bias
+    pixel_bias = abs(on_pixels_mask1 - on_pixels_mask2)
+    
+    return pixel_bias
+
+
+def std(data):
+    """
+    Calculate the standard deviation using PyTorch.
+
+    Args:
+    - data (list, tuple, or Tensor): An array-like structure or a PyTorch Tensor of numerical values.
+
+    Returns:
+    - float or Tensor: The standard deviation of the input data, maintaining the tensor type.
+    """
+    data_tensor = torch.tensor(data, dtype=torch.float32)
+    return data_tensor.std()
