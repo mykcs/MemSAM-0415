@@ -48,7 +48,7 @@ args = EasyDict(base_lr=0.0005,
             compute_ef=True)
 
 opt = get_config(args.task)  # please configure your hyper-parameter
-opt.load_path = 'checkpoints/CAMUS_full/your_checkpoint.pth'
+opt.load_path = 'checkpoints/sam_vit_b_01ec64.pth'
 print("task", args.task, "checkpoints:", opt.load_path)
 opt.mode = "test"
 #opt.classes=2
