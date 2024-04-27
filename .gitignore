@@ -14,3 +14,4 @@ temp_dir
 
 /utils/dataset/CAMUS_public/
 /utils/dataset/EchoNet-Dynamic/
+sam_vit_b_01ec64.pth
