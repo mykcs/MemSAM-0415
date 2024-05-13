@@ -32,13 +32,4 @@ Use `train_video.py` and `test_video.py` to train and test separately.
 ## Acknowledgement
 The work is based on [SAM](https://github.com/facebookresearch/segment-anything), [SAMUS](https://github.com/xianlin7/SAMUS) and [XMem](https://github.com/hkchengrex/XMem). Thanks for the open source contributions to these efforts!
 
-## Citation
-if you find our work useful, please cite our paper.
-```
-@inproceedings{deng2024memsam,
-  title={MemSAM: Taming Segment Anything Model for Echocardiography Video Segmentation},
-  author={Deng, Xiaolong and Wu, Huisi and Zeng, Runhao and Qin, Jing},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  year={2024}
-}
-```
+ref https://github.com/dengxl0520/MemSAM
